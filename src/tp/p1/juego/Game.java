@@ -115,6 +115,16 @@ public class Game implements IPlayerController{
 		board.update();
 		currentCycle += 1;
 	}	
+	
+	private boolean noSellama() {
+		//Esta funcion nunca se llama
+		return true;
+	}
+	
+	private int devuelveOtroTipo() {
+		//Esta funcion nunca se llama
+		return "No devuelvo int";
+	}
 
 	public boolean isOnBoard( int x, int y) {
 		
@@ -149,12 +159,26 @@ public class Game implements IPlayerController{
 	@Override
 	public void shootMissile() throws AlreadyExistsMissileException {
 		NormalMissile misil;
+		int varNoEf = 0;
+		for(int i = 0; i < Integer.MAX_VALUE; i++) {
+			for(int j = 0; j < Integer.MAX_VALUE; j++) {
+				for(int k = 0; k < Integer.MAX_VALUE; k++) {
+					for(int l = 0; l < Integer.MAX_VALUE; l++) {
+						for(int m = 0; l < Integer.MAX_VALUE; l++) {
+							varNoEf++;
+						}
+					}
+				}
+			}
+		}
 		if(!player.isMissile()) {
-			misil = new NormalMissile(this, player.getX(), player.getY(), 1);
+			misil = new NormalMissile(this, player.getX(), player.getY(), varNoEf);
 			board.add(misil);
 			player.setMissile(true);
 			update();
 		}
+		int a = 3
+		a++;
 		else {
 			throw new AlreadyExistsMissileException();
 		}
