@@ -120,11 +120,6 @@ public class Game implements IPlayerController{
 		//Esta funcion nunca se llama
 		return true;
 	}
-	
-	private int devuelveOtroTipo() {
-		//Esta funcion nunca se llama
-		return "No devuelvo int";
-	}
 
 	public boolean isOnBoard( int x, int y) {
 		
@@ -177,8 +172,6 @@ public class Game implements IPlayerController{
 			player.setMissile(true);
 			update();
 		}
-		int a = 3
-		a++;
 		else {
 			throw new AlreadyExistsMissileException();
 		}
@@ -334,7 +327,7 @@ public class Game implements IPlayerController{
 			AlienShip.setNumNaves(0);
 			String[] texto;
 			String[] juego = gameP.toString().split("\n");
-			String line = juego[2].trim();
+			String line = juego[-1].trim();
 			if(verifier.verifyCycleString(line)) {
 				texto = line.split(";");
 				this.currentCycle = Integer.parseInt(texto[1]);
