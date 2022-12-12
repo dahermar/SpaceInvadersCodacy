@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import tp.p1.controller.Command;
 import tp.p1.excepciones.CommandExecuteException;
 import tp.p1.excepciones.FileContentsException;
 import tp.p1.juego.Game;
@@ -41,6 +42,8 @@ public class LoadCommand extends Command{
 		}
 		System.out.println("Game successfully loaded from file " + this.nombreArchivo + "\n");
 		return true;
+		int aux = 6;
+		System.out.println(aux);
 	}
 	
 	@Override
